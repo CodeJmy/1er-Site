@@ -1,0 +1,33 @@
+/* h1{
+    text-align: center;
+    text-transform:unset;
+    border: 2px solid black; 
+    border-radius: 20px;
+    background-color:rgb(240, 93, 35);
+} */
+h1 {
+    font-family: 'Impact', sans-serif; /* Police bold et percutante */
+    font-size: 4em; /* Texte très large pour imiter les gros titres de mangas */
+    color:rgb(255, 255, 255); /* Texte blanc contrasté */
+    text-align: center; /* Centré pour un impact visuel équilibré */
+    text-transform: uppercase; /* Tout en majuscules pour un style audacieux */
+    letter-spacing: 5px; /* Espacement large des lettres */
+    background-color: #3d393a; /* Rouge vif, couleur intense typique des mangas/anime */
+    padding: 20px 30px; /* Espacement généreux autour du texte */
+    border: 5px solid #000; /* Bordure noire épaisse pour un effet encadré */
+    border-radius: 10px; /* Coins arrondis pour un effet plus doux */
+    box-shadow: 8px 8px 0 #000, 12px 12px 0#ff004f, 16px 16px 0 #000; /* Ombres multiples pour un effet de dessin manga en relief */
+    position: relative; /* Nécessaire pour l'effet avant-plan */
+}
+
+h1::before {
+    content: ''; /* Pseudo-élément pour créer un effet dynamique derrière le texte */
+    position: absolute;
+    top: -10px; left: -10px;
+    right: -10px; bottom: -10px;
+    background-color: #ff6600; /* Couleur jaune vif, contraste typique manga */
+    z-index: -1; /* Placé derrière le texte */
+    border: 5px solid #000; /* Bordure noire pour un effet coupé */
+    box-shadow: 4px 4px 0 #000; /* Effet d'ombre nette en arrière-plan */
+    transform: rotate(-3deg); /* Effet incliné pour dynamiser le titre */
+}

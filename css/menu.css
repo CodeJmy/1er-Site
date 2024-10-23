@@ -1,0 +1,58 @@
+.Menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.Menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.Menu li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+}
+
+.Menu li a:hover {
+    background-color: #555;
+}
+
+/* Style pour le sous-menu (initialement caché) */
+.submenuAnime, .submenuScan {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    z-index: 1; /* S'assurer que le sous-menu reste au-dessus */
+}
+
+.submenuAnime li, .submenuScan li {
+    display: block;
+}
+
+/* Style pour les liens du sous-menu */
+.submenuAnime li a, .submenuScan li a {
+    padding: 10px 20px;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+}
+
+.submenuAnime li a:hover, .submenuScan li a:hover {
+    background-color: #555;
+}
+
+/* Afficher les sous-menus lors du survol */
+.Menu li:hover .submenuAnime,
+.Menu li:hover .submenuScan {
+    display: block;
+}
